@@ -31,7 +31,7 @@ h2 {
 }
 
 canvas {
-    display: flex;
+    display: block;
     border: 1px dashed white;
     margin-bottom: 30px;
 }
