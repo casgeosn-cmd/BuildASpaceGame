@@ -1,19 +1,29 @@
-// variable setup 
-const canvas = document.getElementById("displayCanvas");
-const ctx = canvas.getContext("2d");
-rc = random(1, 255);
-randomX = random(1, 600);
-randomY = random(1, 600);
+// simplified code using p5.js library https://p5js.org/
+
+let space;
+let rc;
+let randomX;
+let randomY;
 
 
-// draw circle
-ctx.arc(randomX, randomY, 200, 0, Math.PI * 2);
-ctx.beginPath();
-ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-ctx.fillStyle = "red";
-ctx.lineWidth = 2;
-ctx.stroke();
+function setup() {
+    background(255);
+    createCanvas(800, 600);
+    // variables
+    rc = random(1,255);
+    space = 35;
+    randomX = random(0, width);
+    randomY = random(0, height);
+}
+ function draw() {
+    frameRate(2);
 
-// draw a rectangle
-ctx.fillStyle = "pink";
-ctx.fillRect(10, 10, 150, 100);
+    for (x=0;x<width+50;x+=space){  
+      fill(random(180, 255),0, random(150,255));
+    for (y=0;y<height+50;y+=space){
+      circle(x+space, y + space,15)
+ }
+}
+}
+
+
